@@ -8,6 +8,10 @@ export const input = styled.input`
      width: 30%;
      font-size: 1rem;
      color: #333;
+
+     @media (max-width: 768px) {
+          width: 60%;
+     }
 `;
 
 export const button = styled.button`
