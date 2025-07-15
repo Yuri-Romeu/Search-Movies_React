@@ -1,10 +1,13 @@
-import GlobalStyle from './GlobalStyles';
+import Search from './components/Search';
+import Title from './components/Title';
+import GlobalStyle, { Container } from './GlobalStyles';
 function App() {
      return (
-          <>
+          <Container>
                <GlobalStyle />
-               <h1>Pagina react</h1>
-          </>
+               <Title>Search for a movie</Title>
+               <Search />
+          </Container>
      );
 }
 
