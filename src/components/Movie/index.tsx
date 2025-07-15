@@ -1,21 +1,28 @@
 import { Center } from '../../GlobalStyles';
 import { Info, Meta, MovieContainer, Text } from './style';
 
-const Movie = () => {
+interface MovieProps {
+     movie: {
+          Title: string;
+          Year: string;
+          imdbRating: string;
+          Plot: string;
+          Poster: string;
+     };
+}
+
+const Movie = ({ movie }: MovieProps) => {
      return (
           <Center>
                <MovieContainer>
-                    <img src="https://placehold.co/100x150" />
+                    <img src={movie.Poster} alt={movie.Title} />
                     <Info>
-                         <h3>Movie Title</h3>
+                         <h3>{movie.Title}</h3>
                          <Meta>
-                              <span>2023</span>
-                              <span>8.3</span>
+                              <span>{movie.Year}</span>
+                              <span>{movie.imdbRating}</span>
                          </Meta>
-                         <Text>
-                              Lorem ipsum dolor sit amet quas ex sed, sunt ipsa iste. Dicta, ad. Id
-                              odio similique quasi!
-                         </Text>
+                         <Text>{movie.Plot}</Text>
                     </Info>
                </MovieContainer>
           </Center>

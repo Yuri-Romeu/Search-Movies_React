@@ -7,10 +7,11 @@ export const MovieContainer = styled.div`
      flex-direction: row;
      gap: 10px;
      justify-content: flex-start;
+     margin-bottom: 15px;
 
      img {
           width: 100px;
-          height: 150px;
+          height: 180px;
           display: block;
      }
 `;
